@@ -28,3 +28,11 @@ function containsDuplicate(nums: number[]): boolean {
   }
   return false;
 }
+
+// Alternate solution:
+
+/* 
+function containsDuplicate(nums: number[]): boolean {
+  return new Set<number>(nums).size !== nums.length;
+}
+*/
