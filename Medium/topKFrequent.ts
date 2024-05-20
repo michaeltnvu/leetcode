@@ -35,3 +35,20 @@ function topKFrequent(nums: number[], k:number) {
 
   return sortedElements.slice(0, k).map(entry => entry[0]);
 }
+
+/* 
+ALTERNATE SOLUTION
+
+function topKFrequent(nums: number[], k:number) {
+  const hash = new Map<number, number>();
+
+  for (const num of nums) {
+    hash.set(num, ((hash.get(num) || 0) + 1));
+  }
+
+  return Array.from(hash)
+    .sort(([,a], [,b]) => b - a)
+    .slice(0, k)
+    .map(([num]) => num);
+}
+*/
