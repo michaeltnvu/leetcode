@@ -28,9 +28,8 @@
 // Follow up: Can you solve the problem in O(1) extra space complexity? (The output array does not count as extra space for space complexity analysis.)
 
 function productExceptSelf(nums: number[]): number[] {
-  const answer: number[] = [];
-
-  answer[0] = 1;
+  const answer: number[] = [1];
+  
   for (let i = 1; i < nums.length; i++) {
       answer[i] = answer[i - 1] * nums[i - 1]
   }
