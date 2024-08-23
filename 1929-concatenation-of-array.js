@@ -29,3 +29,22 @@ n == nums.length
 1 <= n <= 1000
 1 <= nums[i] <= 1000
 */
+
+var getConcatenation = function(nums) {
+  const ans = [...nums];
+
+  nums.forEach(num => ans.push(num));
+
+  return ans;
+}
+
+// OR
+
+var getConcatenation = function(nums) {
+  return nums.concat(nums);
+}
+
+/*
+  time complexity: O(n)
+  space complexity: O(n)
+*/
